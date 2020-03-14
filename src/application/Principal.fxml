@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="536.0" prefWidth="952.0" style="-fx-background-image: url(Imagens/mulherbg.jpg); -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrincipalController">
+   <children>
+      <Button fx:id="abrirImagem1" layoutX="209.0" layoutY="102.0" mnemonicParsing="false" onAction="#abreImagem1" opacity="0.77" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: red;" text="Abrir Imagem 1" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="abrirImagem2" layoutX="421.0" layoutY="101.0" mnemonicParsing="false" onAction="#abreImagem2" opacity="0.78" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: red;" text="Abrir Imagem 2" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="salvar" layoutX="636.0" layoutY="100.0" mnemonicParsing="false" opacity="0.77" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Salvar" textFill="#171111">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblG" layoutX="468.0" layoutY="23.0" opacity="0.8" prefHeight="55.0" prefWidth="61.0" textFill="#158c06c2">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblB" layoutX="583.0" layoutY="23.0" opacity="0.78" prefHeight="55.0" prefWidth="61.0" textFill="#2200ffb8">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="168.0" layoutY="158.0" opacity="0.82" prefHeight="322.0" prefWidth="215.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="443.0" prefWidth="694.0">
+               <children>
+                  <ImageView fx:id="imageView1" fitHeight="244.0" fitWidth="222.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="392.0" layoutY="158.0" opacity="0.83" prefHeight="322.0" prefWidth="205.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="565.0">
+               <children>
+                  <ImageView fx:id="imageView2" fitHeight="255.0" fitWidth="205.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="607.0" layoutY="158.0" opacity="0.85" prefHeight="322.0" prefWidth="205.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="423.0" prefWidth="550.0">
+               <children>
+                  <ImageView fx:id="imageView3" fitHeight="255.0" fitWidth="205.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="histograma" layoutX="710.0" layoutY="34.0" mnemonicParsing="false" opacity="0.76" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Histograma" textFill="#171111">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Accordion layoutX="14.0" layoutY="13.0">
+        <panes>
+          <TitledPane animated="false" text="Tons de Cinza">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="47.0" layoutY="22.0" mnemonicParsing="false" onAction="#cinzaAritmetica" text="Média Aritmética" />
+                        <TextField layoutX="8.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" />
+                        <TextField layoutX="70.0" layoutY="62.0" prefHeight="25.0" prefWidth="48.0" />
+                        <TextField layoutX="131.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" />
+                        <Button layoutX="45.0" layoutY="100.0" mnemonicParsing="false" text="Média Ponderada" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Limiarização">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" prefHeight="211.0" prefWidth="182.0" text="Negativa">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="60.0" prefHeight="211.0" prefWidth="182.0" text="Adição / Subtração">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <Label fx:id="lblR" layoutX="341.0" layoutY="39.0" prefHeight="36.0" prefWidth="95.0" text="Label" textFill="#f70505e0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblG" layoutX="455.0" layoutY="39.0" prefHeight="36.0" prefWidth="95.0" text="Label" textFill="#088527d6">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblB" layoutX="578.0" layoutY="39.0" prefHeight="36.0" prefWidth="87.0" text="Label" textFill="#4b0ddbdc">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
