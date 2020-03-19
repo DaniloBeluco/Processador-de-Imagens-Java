@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.AmbientLight?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="536.0" prefWidth="952.0" style="-fx-background-image: url(Imagens/mulherbg.jpg); -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrincipalController">
+<AnchorPane prefHeight="583.0" prefWidth="1184.0" style="-fx-background-image: url(Imagens/mulherbg.jpg); -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrincipalController">
    <children>
-      <Button fx:id="abrirImagem1" layoutX="209.0" layoutY="102.0" mnemonicParsing="false" onAction="#abreImagem1" opacity="0.77" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: red;" text="Abrir Imagem 1" textFill="WHITE">
+      <Button fx:id="abrirImagem1" layoutX="431.0" layoutY="99.0" mnemonicParsing="false" onAction="#abreImagem1" opacity="0.77" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: red;" text="Abrir Imagem 1" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="abrirImagem2" layoutX="421.0" layoutY="101.0" mnemonicParsing="false" onAction="#abreImagem2" opacity="0.78" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: red;" text="Abrir Imagem 2" textFill="WHITE">
+      <Button fx:id="abrirImagem2" layoutX="701.0" layoutY="99.0" mnemonicParsing="false" onAction="#abreImagem2" opacity="0.78" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: red;" text="Abrir Imagem 2" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="salvar" layoutX="636.0" layoutY="100.0" mnemonicParsing="false" opacity="0.77" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Salvar" textFill="#171111">
+      <Button fx:id="salvar" layoutX="971.0" layoutY="99.0" mnemonicParsing="false" opacity="0.77" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Salvar" textFill="#171111">
          <font>
             <Font size="15.0" />
          </font>
@@ -37,61 +39,68 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="168.0" layoutY="158.0" opacity="0.82" prefHeight="322.0" prefWidth="215.0">
+      <ScrollPane layoutX="363.0" layoutY="164.0" opacity="0.94" prefHeight="316.0" prefWidth="249.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="443.0" prefWidth="694.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="685.0" prefWidth="781.0">
                <children>
-                  <ImageView fx:id="imageView1" fitHeight="244.0" fitWidth="222.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView1" fitHeight="300.0" fitWidth="240.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
         </content>
       </ScrollPane>
-      <ScrollPane layoutX="392.0" layoutY="158.0" opacity="0.83" prefHeight="322.0" prefWidth="205.0">
+      <ScrollPane layoutX="644.0" layoutY="162.0" opacity="0.91" prefHeight="318.0" prefWidth="243.0">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="565.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="625.0" prefWidth="725.0">
                <children>
-                  <ImageView fx:id="imageView2" fitHeight="255.0" fitWidth="205.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView2" fitHeight="311.0" fitWidth="205.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
          </content>
       </ScrollPane>
-      <ScrollPane layoutX="607.0" layoutY="158.0" opacity="0.85" prefHeight="322.0" prefWidth="205.0">
+      <ScrollPane layoutX="916.0" layoutY="162.0" opacity="0.93" prefHeight="318.0" prefWidth="239.0">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="423.0" prefWidth="550.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="663.0" prefWidth="642.0">
                <children>
-                  <ImageView fx:id="imageView3" fitHeight="255.0" fitWidth="205.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView3" fitHeight="309.0" fitWidth="227.0" layoutX="-3.0" onMouseMoved="#rasterImg" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
          </content>
       </ScrollPane>
-      <Button fx:id="histograma" layoutX="710.0" layoutY="34.0" mnemonicParsing="false" opacity="0.76" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Histograma" textFill="#171111">
+      <Button fx:id="histograma" layoutX="973.0" layoutY="34.0" mnemonicParsing="false" opacity="0.76" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Histograma" textFill="#171111">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
-      <Accordion layoutX="14.0" layoutY="13.0">
+      <Accordion layoutX="42.0" layoutY="67.0" opacity="0.89">
         <panes>
           <TitledPane animated="false" text="Tons de Cinza">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Button layoutX="47.0" layoutY="22.0" mnemonicParsing="false" onAction="#cinzaAritmetica" text="Média Aritmética" />
-                        <TextField layoutX="8.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" />
-                        <TextField layoutX="70.0" layoutY="62.0" prefHeight="25.0" prefWidth="48.0" />
-                        <TextField layoutX="131.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" />
-                        <Button layoutX="45.0" layoutY="100.0" mnemonicParsing="false" text="Média Ponderada" />
+                        <TextField fx:id="txtR" layoutX="8.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" promptText="\% R" text="0" />
+                        <TextField fx:id="txtG" layoutX="70.0" layoutY="62.0" prefHeight="25.0" prefWidth="48.0" promptText="\% G" text="0" />
+                        <TextField fx:id="txtB" layoutX="131.0" layoutY="62.0" prefHeight="25.0" prefWidth="50.0" promptText="\% B" text="0" />
+                        <Button layoutX="45.0" layoutY="100.0" mnemonicParsing="false" onAction="#cinzaPonderada" text="Média Ponderada" />
                      </children>
                   </AnchorPane>
             </content>
           </TitledPane>
           <TitledPane animated="false" text="Limiarização">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Slider fx:id="limiarizacao" layoutX="30.0" layoutY="67.0" max="1.0" onMouseClicked="#limiarizarImagem" value="0.5" />
+                        <Label fx:id="lblLimiarizacao" layoutX="86.0" layoutY="90.0" text="Label" />
+                     </children></AnchorPane>
             </content>
           </TitledPane>
           <TitledPane animated="false" prefHeight="211.0" prefWidth="182.0" text="Negativa">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="49.0" layoutY="32.0" mnemonicParsing="false" onAction="#negativa" text="Aplicar Negativa" />
+                     </children></AnchorPane>
             </content>
           </TitledPane>
             <TitledPane animated="false" layoutX="10.0" layoutY="60.0" prefHeight="211.0" prefWidth="182.0" text="Adição / Subtração">
@@ -101,20 +110,21 @@
             </TitledPane>
         </panes>
       </Accordion>
-      <Label fx:id="lblR" layoutX="341.0" layoutY="39.0" prefHeight="36.0" prefWidth="95.0" text="Label" textFill="#f70505e0">
+      <Label fx:id="lblR" layoutX="457.0" layoutY="33.0" prefHeight="36.0" prefWidth="95.0" text="Label" textFill="#f70505e0">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="lblG" layoutX="455.0" layoutY="39.0" prefHeight="36.0" prefWidth="95.0" text="Label" textFill="#088527d6">
+      <Label fx:id="lblG" layoutX="626.0" layoutY="33.0" prefHeight="36.0" prefWidth="95.0" text="Label" textFill="#088527d6">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="lblB" layoutX="578.0" layoutY="39.0" prefHeight="36.0" prefWidth="87.0" text="Label" textFill="#4b0ddbdc">
+      <Label fx:id="lblB" layoutX="787.0" layoutY="33.0" prefHeight="36.0" prefWidth="87.0" text="Label" textFill="#4b0ddbdc">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <AmbientLight color="CHARTREUSE" layoutX="262.0" layoutY="35.0" lightOn="true" />
    </children>
 </AnchorPane>

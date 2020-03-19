@@ -5,6 +5,8 @@ import java.io.File;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -46,16 +48,60 @@ public class PrincipalController {
 	@FXML
 	private ImageView imgRes;
 
+	@FXML
+	private Slider limiarizacao;
+
+	@FXML
+	private Label lblLimiarizacao;
+	
+	@FXML
+	private TextField txtR;
+	
+	@FXML
+	private TextField txtG;
+	
+	@FXML
+	private TextField txtB;
+
 	private Image img1;
 	private Image img2;
 	private Image img3;
+
+	@FXML
+	public void atualizaLabel() {
+		Double v = limiarizacao.getValue();
+		lblLimiarizacao.setText(v.toString());
+	}
 
 	@FXML
 	public void cinzaAritmetica() {
 		img3 = Pdi.cinzaMediaAritmetica(img1, 0, 0, 0);
 		atualizaImagem3();
 	}
+	
+	@FXML
+	public void cinzaPonderada() {
+		int pr, pg, pb;
+		pr = Integer.parseInt(txtR.getText().toString())/3;
+		pg = Integer.parseInt(txtG.getText().toString())/3;
+		pb = Integer.parseInt(txtB.getText().toString())/3;
+		
+		
+		img3 = Pdi.cinzaMediaAritmetica(img1, pr, pg, pb);
+		atualizaImagem3();
+	}
 
+	@FXML
+	public void limiarizarImagem() {
+		img3 = Pdi.limiarizacao(img1, limiarizacao.getValue());
+		atualizaImagem3();
+	}
+	
+	@FXML
+	public void negativa() {
+		img3 = Pdi.negativa(img1);
+		atualizaImagem3();
+	}
 
 	@FXML
 	public void rasterImg(MouseEvent evt) {
